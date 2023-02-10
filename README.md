@@ -103,3 +103,67 @@ namespace ConsoleApp1
     }
 }
 
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Введите логин");
+            string a = Console.ReadLine();
+            switch (a)
+            {
+                case "User":
+                    {
+                        Console.WriteLine("Введите пароль");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        switch (b)
+                        {
+                            case 1607:
+                                Console.WriteLine("Hello User");
+                                break;
+                            default: Console.WriteLine("Password is not correct");
+                                break;
+                        }
+                        break;
+                    }
+                case "Admin":
+                    {
+                        Console.WriteLine("Введите пароль");
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        switch (c)
+                        {
+                            case 1023:
+                                Console.WriteLine("Hello Administrator");
+                                break;
+                            default:
+                                Console.WriteLine("Password is not correct");
+                                break;
+                        }
+                        break;
+                
+                    }
+                case "":
+                    {
+                        Console.WriteLine("Hello Anonimus");
+                        break;
+                    }
+
+            }
+        }
+    }
+}
