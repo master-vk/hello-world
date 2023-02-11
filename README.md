@@ -167,3 +167,55 @@ namespace ConsoleApp3
         }
     }
 }
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string h = "IT";
+            string j;
+            string a;
+            string b = "User";
+            string p = "";
+            string tp = "Ven!k";
+            string g = "Admin";
+
+            Console.WriteLine("Enter your login");
+            string c = Console.ReadLine();
+            if (c == g)
+            {
+                Console.WriteLine("Enter your password");
+                string l = Console.ReadLine();
+                j = l == h ? "Hello Administrator" : " Password is not correct";
+                Console.WriteLine(j);
+            }
+            if (c == b)
+            {
+                Console.WriteLine("Enter your password");
+                string r = Console.ReadLine();
+                a = r == tp ? "Hello User" : " Password is not correct";
+                Console.WriteLine(a);
+            }
+            if (c == p)
+            {
+                Console.WriteLine("Hello Anonimus");
+            }
+           
+
+
+           
+          
+        }
+    }
+}
