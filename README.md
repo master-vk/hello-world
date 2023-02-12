@@ -219,3 +219,68 @@ namespace ConsoleApp2
         }
     }
 }
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            const int MAX_SMASK_SIZE = 96;
+            const int MIN_SMASK_SIZE = 3;
+
+
+            int mask = 0b0110000;
+            string word = string.Empty;
+
+            int w = 82;
+            int o = 85;
+            int r = 67;
+            int d = 68;
+
+
+            w = w ^ mask;
+            o = o ^ mask;
+            r = r ^ mask;
+            d = d ^ mask;
+
+
+            if (mask < MAX_SMASK_SIZE && mask > MIN_SMASK_SIZE && w < o && o < r && (!(r > d)) && o != '\x77' ^ w == 'J')
+
+            {
+
+                word = CreateWord(w, o, r, d);
+            }
+
+
+            PrintMask(mask);
+            Console.WriteLine(string.IsNullOrEmpty(word) ? "Try again ;)" : word);
+            Console.ReadKey();
+        }
+
+
+        static void PrintMask(int number)
+        {
+
+            string mask = Convert.ToString(number, 2).PadLeft(8, '0');
+
+            Console.WriteLine($"Your mask is: {mask}");
+
+        }
+
+
+        static string CreateWord(int w, int o, int r, int d)
+        {
+
+            return $" Your word is: {(char)w}{(char)o}{(char)r}{(char)d}";
+        }
+    }
+}
