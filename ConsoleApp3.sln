@@ -1,25 +1,92 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33213.308
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp3", "ConsoleApp3\ConsoleApp3.csproj", "{5034EED3-B6DB-451B-9293-A316EEBF7F6A}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5034EED3-B6DB-451B-9293-A316EEBF7F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5034EED3-B6DB-451B-9293-A316EEBF7F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5034EED3-B6DB-451B-9293-A316EEBF7F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5034EED3-B6DB-451B-9293-A316EEBF7F6A}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {00D9F8B0-C6E0-4A21-81FC-A064F4E5DE80}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static int Sum(int a, int b)
+        {
+            int result = a + b;
+            return result;
+        }
+        static int Subtracting(int a, int b)
+        {
+            int result = a - b;
+            return result;
+        }
+        static int Division(int a, int b)
+        {
+            int result = a / b;
+            return result;
+        }
+        static int Multiplication(int a, int b)
+        {
+            int result = a * b;
+            return result;
+        }
+        static int Exponentiation(int a, int b)
+        {
+            int result = a * a;
+            return result;
+        }
+
+
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 6; i++)
+            { 
+            int a, b, c, d, f, h, l;    
+            char r;
+            char p = '/';
+            Console.WriteLine("Введите первое целое число");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе челове число число");
+            b = int.Parse(Console.ReadLine()); 
+            Console.WriteLine("Введите тип операции");
+            r = char.Parse(Console.ReadLine());
+                if (r == p && b == 0 )
+                {
+                    Console.WriteLine("На ноль делить нельзя");
+                }
+
+
+
+                c = Sum(a, b);
+
+            d = Subtracting(a, b);
+
+            f = Division(a, b);
+
+            h = Multiplication(a, b);
+
+            l = Exponentiation(a, b);
+
+
+
+                switch (r)
+                {
+                    case '+':
+                        Console.WriteLine(c);
+                        break;
+                    case '-':
+                        Console.WriteLine(d);
+                        break;
+                    case '*':
+                        Console.WriteLine(h);
+                        break;
+                    case '^':
+                        Console.WriteLine(l);
+                        break;
+                    case '/':
+                        Console.WriteLine(f);
+                        break;
+
+                }
+            }
+        }
+    }
+}
