@@ -238,7 +238,7 @@ namespace ConsoleApp5
             const int MIN_SMASK_SIZE = 3;
 
 
-            int mask = 0b0110000;
+            int mask = 0b0001100 < 2;
             string word = string.Empty;
 
             int w = 82;
