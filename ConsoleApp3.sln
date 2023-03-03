@@ -4,89 +4,91 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp3
+namespace ConsoleApp8
 {
-    internal class Program
-    {
-        static int Sum(int a, int b)
-        {
-            int result = a + b;
-            return result;
-        }
-        static int Subtracting(int a, int b)
-        {
-            int result = a - b;
-            return result;
-        }
-        static int Division(int a, int b)
-        {
-            int result = a / b;
-            return result;
-        }
-        static int Multiplication(int a, int b)
-        {
-            int result = a * b;
-            return result;
-        }
-        static int Exponentiation(int a, int b)
-        {
-            int result = a * a;
-            return result;
-        }
+	internal class Program
+	{
+		static int Sum(int a, int b)
+		{
+			int result = a + b;
+			return result;
+		}
+		static int Subtracting(int a, int b)
+		{
+			int result = a - b;
+			return result;
+		}
+		static int Division(int a, int b)
+		{
+			int result = a / b;
+			return result;
+		}
+		static int Multiplication(int a, int b)
+		{
+			int result = a * b;
+			return result;
+		}
+		static int Exponentiation(int a, int b)
+		{
+			int result = Convert.ToInt32(Math.Pow(a,b));
+			return result;
+		}
 
 
-        static void Main(string[] args)
-        {
-            for (int i = 0; i < 6; i++)
-            { 
-            int a, b, c, d, f, h, l;    
-            char r;
-            char p = '/';
-            Console.WriteLine("Введите первое целое число");
-            a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите второе челове число число");
-            b = int.Parse(Console.ReadLine()); 
-            Console.WriteLine("Введите тип операции");
-            r = char.Parse(Console.ReadLine());
-                if (r == p && b == 0 )
-                {
-                    Console.WriteLine("На ноль делить нельзя");
-                }
-
-
-
-                c = Sum(a, b);
-
-            d = Subtracting(a, b);
-
-            f = Division(a, b);
-
-            h = Multiplication(a, b);
-
-            l = Exponentiation(a, b);
+		static void Main(string[] args)
+		{
+			for (int i = 0; i < 6; i++)
+			{
+				int a, b, c, d, f, h, l;
+				char r;
+				char p = '/';
+				Console.WriteLine("Введите первое целое число");
+				a = int.Parse(Console.ReadLine());
+				Console.WriteLine("Введите второе челове число число");
+				b = int.Parse(Console.ReadLine());
+				Console.WriteLine("Введите тип операции");
+				r = char.Parse(Console.ReadLine());
+				if (r == p && b == 0)
+				{
+					Console.WriteLine("На ноль делить нельзя");
+				}
 
 
 
-                switch (r)
-                {
-                    case '+':
-                        Console.WriteLine(c);
-                        break;
-                    case '-':
-                        Console.WriteLine(d);
-                        break;
-                    case '*':
-                        Console.WriteLine(h);
-                        break;
-                    case '^':
-                        Console.WriteLine(l);
-                        break;
-                    case '/':
-                        Console.WriteLine(f);
-                        break;
+				c = Sum(a, b);
 
-                }
-            }
-        }
-    }
+				d = Subtracting(a, b);
+
+				f = Division(a, b);
+
+				h = Multiplication(a, b);
+
+				l = Exponentiation(a, b);
+
+
+
+				switch (r)
+				{
+					case '+':
+						Console.WriteLine(c);
+						break;
+					case '-':
+						Console.WriteLine(d);
+						break;
+					case '*':
+						Console.WriteLine(h);
+						break;
+					case '^':
+						Console.WriteLine(l);
+						break;
+					case '/':
+						Console.WriteLine(f);
+						break;
+				}
+
+				
+			
+			}
+		}
+	}
 }
