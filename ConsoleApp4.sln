@@ -88,13 +88,7 @@ namespace ConsoleApp4
             Add(a, b,sum);
         }
        
-        
-        
-
-
-
-
-
+     
         static void Main(string[] args)
         {
             int sum = 0;
@@ -108,4 +102,81 @@ namespace ConsoleApp4
         } 
     }
 }
-2)
+2)void Add(double a, double b
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Add(double  a, double b, double sum)
+        {
+            
+            double result;
+             result = a + b;
+            sum = sum + result;
+            
+            Console.WriteLine(sum);
+            Add(a, b,sum);
+        }
+    
+        static void Main(string[] args)
+        {
+
+            double sum = 0, a, b;
+             
+             a = double.Parse(Console.ReadLine());
+             b = double.Parse(Console.ReadLine());
+
+
+            Add(a, b, sum);
+            
+
+        } 
+    }
+}
+3)void Add(string a, string b
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Add( string a, string b)
+        {
+            string sum = "";
+            string result;
+             result = a + b;
+            sum = sum + result;
+            
+            Console.WriteLine(sum);
+            Add(a, b);
+        }
+
+        static void Main(string[] args)
+        {
+
+            string sum, a, b;
+             
+             a = Console.ReadLine();
+             b = Console.ReadLine();
+
+
+            Add(a, b);
+            
+
+        } 
+    }
+}
