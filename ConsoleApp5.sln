@@ -1,25 +1,45 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33213.308
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp5", "ConsoleApp5\ConsoleApp5.csproj", "{1426C087-3232-4C85-BFEF-A1329D474620}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1426C087-3232-4C85-BFEF-A1329D474620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1426C087-3232-4C85-BFEF-A1329D474620}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1426C087-3232-4C85-BFEF-A1329D474620}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1426C087-3232-4C85-BFEF-A1329D474620}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C888A468-C183-4A4A-BB78-D37D59297740}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] meArray;
+
+            meArray = new int[1];
+
+            meArray[0] = 1;
+  
+            for (; meArray[0] < 6; meArray[0]++)
+            {
+                switch (meArray[0])
+                {
+                    case 1:
+                        Console.WriteLine("    *    ");
+                        break;
+                    case 2:
+                        Console.WriteLine("   ***   ");
+                        break;
+                    case 3:
+                        Console.WriteLine("  *****  ");
+                        break;
+                    case 4:
+                        Console.WriteLine(" ******* ");
+                        break;
+                    case 5:
+                        Console.WriteLine("*********");
+                        break;
+                }
+
+
+
+            }
+        }
+    }
+}
