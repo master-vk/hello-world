@@ -1,25 +1,54 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33213.308
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp4", "ConsoleApp4\ConsoleApp4.csproj", "{FA731211-7466-49C5-BD94-BD216C3ABF29}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA731211-7466-49C5-BD94-BD216C3ABF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA731211-7466-49C5-BD94-BD216C3ABF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA731211-7466-49C5-BD94-BD216C3ABF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA731211-7466-49C5-BD94-BD216C3ABF29}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FBA5FD4C-CC33-4E17-8B00-694F01D9D62C}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+       static void SumTo(int a,int n,int b,int r)
+        {
+            
+            
+            int result = 1;
+            if (b >= n)          
+            return;
+            b++;
+            
+            a = result + a;
+            r = r + a;
+           
+
+            Console.WriteLine(r);
+            SumTo(a, n, b, r);
+            
+            
+
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            int b = 1;
+            int r = 1;
+            int a = 1;
+            int n;
+
+            n =int.Parse(Console.ReadLine());
+            if (n <= 0)
+            {
+                Console.WriteLine("Недопустимое значение аргумента");
+            }
+
+
+          SumTo(a,n,b,r);
+                
+
+           
+        } 
+    }
+}
