@@ -52,3 +52,53 @@ namespace ConsoleApp4
         } 
     }
 }
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Add(int a, int b,int sum)
+        {
+            
+            int result;
+             result = a + b;
+            sum = sum + result;
+            
+            Console.WriteLine(sum);
+            Add(a, b,sum);
+        }
+       
+        
+        
+
+
+
+
+
+        static void Main(string[] args)
+        {
+            int sum = 0;
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+
+
+            Add(a, b, sum);
+            
+
+        } 
+    }
+}
