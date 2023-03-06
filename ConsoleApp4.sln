@@ -9,47 +9,38 @@ namespace ConsoleApp4
 {
     internal class Program
     {
-       static void SumTo(int a,int n,int b,int r)
+       static int SumTo(int number)
         {
-            
-            
-            int result = 1;
-            if (b >= n)          
-            return;
-            b++;
-            
-            a = result + a;
-            r = r + a;
-           
-
-            Console.WriteLine(r);
-            SumTo(a, n, b, r);
-            
-            
-
+        //ми знаємо, що меньше 1 нам рахувати не треба, тому маємо нижній ліміт 1, та верхній ліміт введе користувач. Тому можемо залишити в методі тільки number аргумент
+            if (number < 1)
+            {
+                Console.WriteLine("Неприпустиме значення аргументу");
+                return 0;
+            }
+            else if (number == 1)
+            {
+                return 1;
+            }
+            else
+            {
+            //меньше коду займе, якщо будемо суммувати з кінця і прямувати до одиниці
+                return number + SumTo(number - 1);
+            }
         }
 
 
 
         static void Main(string[] args)
         {
-            int b = 1;
-            int r = 1;
-            int a = 1;
-            int n;
+            int inputNumber;
 
-            n =int.Parse(Console.ReadLine());
-            if (n <= 0)
-            {
-                Console.WriteLine("Недопустимое значение аргумента");
-            }
+            inputNumber = int.Parse(Console.ReadLine());
 
+            int result = SumTo(inputNumber);
 
-          SumTo(a,n,b,r);
-                
+            Console.WriteLine(result);
 
-           
-        } 
+        }
     }
 }
 
