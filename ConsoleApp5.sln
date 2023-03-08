@@ -8,10 +8,11 @@ namespace ConsoleApp5
 {
     internal class Program
     {
-        static void Tablica()
+        static void Tablica()//назва методу повинна говорити що він робе напр FillArrayByTriangle()
         {
             char[,] array = new char[,]
             {
+            //тут треба динамічно заповнити, тобто використовуючи цикл
                 {' ',' ',' ',' ','*',' ',' ',' ',' '},
                 {' ',' ',' ','*','*','*',' ',' ',' '},
                 {' ',' ','*','*','*','*','*',' ',' '},
@@ -20,9 +21,9 @@ namespace ConsoleApp5
              };
             int hight = array.GetLength(0);
             int width = array.GetLength(1);
-            Vozvrat(hight, width,array);
+            Vozvrat(hight, width,array);// це викликати треба з Main()
         }
-        static void Vozvrat(int hight,int width,char[,]array)
+        static void Vozvrat(int hight,int width,char[,]array)//назва методу повинна говорити що він робе напр PrintArray()
         {
             for (int x = 0; x < hight; x++)
             {
