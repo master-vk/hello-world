@@ -8,38 +8,39 @@ namespace ConsoleApp5
 {
     internal class Program
     {
+        static void Tablica()
+        {
+            char[,] array = new char[,]
+            {
+                {' ',' ',' ',' ','*',' ',' ',' ',' '},
+                {' ',' ',' ','*','*','*',' ',' ',' '},
+                {' ',' ','*','*','*','*','*',' ',' '},
+                {' ','*','*','*','*','*','*','*',' '},
+                {'*','*','*','*','*','*','*','*','*'},
+             };
+            int hight = array.GetLength(0);
+            int width = array.GetLength(1);
+            Vozvrat(hight, width,array);
+        }
+        static void Vozvrat(int hight,int width,char[,]array)
+        {
+            for (int x = 0; x < hight; x++)
+            {
+                for (int y = 0; y < width; y++)
+                {
+                    Console.Write(array[x, y]);
+                }
+                Console.WriteLine();
+            }
+            
+        }
+
         static void Main(string[] args)
         {
-            int[] meArray;
+            
+           Tablica();
+         
 
-            meArray = new int[1];
-
-            meArray[0] = 1;
-  
-            for (; meArray[0] < 6; meArray[0]++)
-            {
-                switch (meArray[0])
-                {
-                    case 1:
-                        Console.WriteLine("    *    ");
-                        break;
-                    case 2:
-                        Console.WriteLine("   ***   ");
-                        break;
-                    case 3:
-                        Console.WriteLine("  *****  ");
-                        break;
-                    case 4:
-                        Console.WriteLine(" ******* ");
-                        break;
-                    case 5:
-                        Console.WriteLine("*********");
-                        break;
-                }
-
-
-
-            }
         }
     }
-}
+}  
